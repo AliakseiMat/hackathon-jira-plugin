@@ -1,0 +1,26 @@
+{
+  "key": "${addon.key}",
+  "baseUrl": "${addon.base-url}",
+  "name": "Atlassian Addon",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+  "modules": {
+    "jiraProjectPages": [
+      {
+        "url": "/project/page?projectId={project.id}",
+        "iconUrl": "/images/chatmeter_logo.png",
+        "weight": 100,
+        "name": {
+          "value": "Chatmeter"
+        },
+        "key": "chatmeter-project-page"
+      }
+    ]
+  },
+  "scopes": ["READ", "WRITE"]
+}
